@@ -1,3 +1,4 @@
+var assign = require('object-assign');
 var through = require('through2');
 
 var defaults = {
@@ -6,7 +7,7 @@ var defaults = {
 };
 
 module.exports = function (bundle, options) {
-  options = Object.assign({}, defaults, options);
+  options = assign({}, defaults, options);
 
   var script = "document.write('<script src=\"//" + options.host + ":" + options.port + "/livereload.js?snipver=1\"></script>');";
 
