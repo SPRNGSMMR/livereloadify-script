@@ -1,4 +1,4 @@
-# livereloadify-script
+# livereloadify-script [![Build Status](https://travis-ci.org/SPRNGSMMR/livereloadify-script.svg?branch=master)](https://travis-ci.org/SPRNGSMMR/livereloadify-script)
 Browserify plugin, aims to inject a LiveReload script into your js bundle.
 
 ## Quick Example
