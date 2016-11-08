@@ -6,7 +6,7 @@
   "scripts": {
     "pretest": "touch test/test.js",
     "test": "node test",
-    "posttest": "rm -r test/test.js"
+    "posttest": "rm -f test/test.js"
   },
   "repository": {
     "type": "git",
