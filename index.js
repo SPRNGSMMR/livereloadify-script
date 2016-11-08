@@ -1,21 +1,32 @@
-var prepend = require('prepend-file');
+var through = require('through2');
+
+var defaults = {
+  host: 'localhost',
+  port: '35729'
+};
 
 module.exports = function (bundle, options) {
-  if (!bundle.argv && !options.outfile) {
-    throw new Error('Browserify option --outfile must be specified.');
-  }
+  options = Object.assign({}, defaults, options);
 
-  var outfile = options.outfile || bundle.argv.outfile;
-  var host = options.host || 'localhost';
-  var port = options.port || 35729;
+  var script = "document.write('<script src=\"//" + options.host + ":" + options.port + "/livereload.js?snipver=1\"></script>');";
 
-  bundle.on('bundle', function (stream) {
-    stream.on('end', function () {
-      prepend(outfile, "document.write('<script src=\"//" + host + ":" + port + "/livereload.js?snipver=1\"></script>');", function (err) {
-        if (err) {
-          throw err;
+  bundle.on('bundle', function () {
+    var first = true;
+
+    bundle.pipeline
+      .get('wrap')
+      .push(through.obj(function (chunk, enc, next) {
+        if (first) {
+          this.push(new Buffer(script));
+
+          first = false;
         }
-      });
-    });
+
+        this.push(chunk);
+
+        next();
+    }));
   });
 };
+
+module.exports.defaults = defaults;
