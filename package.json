@@ -1,0 +1,33 @@
+{
+  "name": "livereloadify-script",
+  "version": "1.0.0",
+  "description": "Browserify plugin, aims to inject a livereload script into your js bundle.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SPRNGSMMR/livereloadify-script.git"
+  },
+  "keywords": [
+    "browserify",
+    "livereload",
+    "live",
+    "reload",
+    "script",
+    "snippet",
+    "plugin",
+    "html"
+  ],
+  "author": "Sylvain Reucherand <sr@springsummer.dk> (http://springsummer.dk)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SPRNGSMMR/livereloadify-script/issues"
+  },
+  "homepage": "https://github.com/SPRNGSMMR/livereloadify-script#readme",
+  "devDependencies": {
+    "prepend-file": "^1.3.0",
+    "tape": "^4.6.2"
+  }
+}
