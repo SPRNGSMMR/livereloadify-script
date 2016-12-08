@@ -1,6 +1,6 @@
 {
   "name": "livereloadify-script",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Browserify plugin, aims to inject a livereload script into your js bundle.",
   "main": "index.js",
   "scripts": {
