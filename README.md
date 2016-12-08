@@ -26,6 +26,7 @@ $ browserify app.js -o app.bundle.js -p [ livereloadify-script --port 37687 ]
 #### Options
 
 - `host`: (default `localhost`) is the address of the LiveReload server.
+- `local`: (default `false`) true if you wanna use your local ip address automatically, it will take over the host option unless no ip are found.
 - `port`: (default `35729`) on which the livereload server has been configured.
 
 ## Testing

@@ -20,6 +20,7 @@
     "reload",
     "script",
     "snippet",
+    "ip",
     "plugin",
     "html"
   ],
@@ -35,6 +36,7 @@
     "tape": "^4.6.2"
   },
   "dependencies": {
+    "dev-ip": "^1.0.1",
     "object-assign": "^4.1.0",
     "through2": "^2.0.1"
   }
